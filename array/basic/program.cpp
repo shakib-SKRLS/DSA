@@ -61,6 +61,37 @@ int secondLargestO(vector<int> & arr){
 }
 
 
+// Remove Duplicates from Sorted Array
+void duplicate_r(vector<int>& arr){
+    if(arr.size()<=0) return;
+    int i=0;
+    for(int j=1; j<arr.size(); j++){
+        if(arr[i] != arr[j]){
+            arr[i+1]=arr[j];
+            i++;
+        }
+    }
+    cout<<(i+1);
+}
+
+// Check if Array Is Sorted and Rotated
+bool check(vector<int>& nums){
+    int count=0;
+    int n=nums.size();
+    for(int i=1; i<n; i++){
+        if(nums[i-1]> nums[i]){
+            count++;
+        }
+        
+    }
+    // checking for last and first element of the array for roatation
+    if(nums[n-1]>nums[0]){
+        count++;
+    }
+    return count<=1;
+}
+
+
 int main() {
 
     vector<int> arr = {4, 5, 2, 1, 6};

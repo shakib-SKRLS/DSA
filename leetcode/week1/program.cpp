@@ -58,3 +58,25 @@ public:
         return profit;
     }
 };
+
+// Move Zeroes (#283)
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int index = 0;
+
+        // Move all non-zero elements to the front
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+
+        // Fill remaining positions with zero
+        while (index < nums.size()) {
+            nums[index] = 0;
+            index++;
+        }
+    }
+};

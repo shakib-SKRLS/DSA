@@ -43,9 +43,10 @@ using namespace std;
 // }
 
 // optimal solution
-class Solution {
+class Solution121 {
 public:
     int maxProfit(std::vector<int>& prices) {
+        if (prices.empty()) return 0;
         int buy = prices[0];
         int profit = 0;
         for (int i = 1; i < prices.size(); i++) {
@@ -60,7 +61,7 @@ public:
 };
 
 // Move Zeroes (#283)
-class Solution {
+class Solution283 {
 public:
     void moveZeroes(vector<int>& nums) {
         int index = 0;
@@ -83,7 +84,7 @@ public:
 
 
 // shuffle array
-class Solution {
+class Solution1470 {
 public:
     vector<int> shuffle(vector<int>& nums, int n) {
         vector<int> ans;

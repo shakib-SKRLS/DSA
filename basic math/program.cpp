@@ -185,8 +185,6 @@ int main()
 {
     int n = 10;
     int m = 30;
-    //    cin>>n;
-    //    armstrongNum(n);
-    // printAllDivisors(n);
-    // gcd(n, m);
+    extractionOfDigits(n);
+    cout << endl;
 }

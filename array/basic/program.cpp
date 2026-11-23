@@ -8,6 +8,8 @@ using namespace std;
 // Brute force approach -- O(n log n)
 
 int largest(vector<int>& arr) {
+    if (arr.empty()) return -1;
+
     sort(arr.begin(), arr.end());
 
     return arr[arr.size() - 1];
@@ -16,6 +18,7 @@ int largest(vector<int>& arr) {
 // optimal O(n)
 
 int largestO(vector<int>& arr){
+    if (arr.empty()) return -1;
     int max = arr[0];
     for(int i= 1; i<arr.size(); i++){
         if(max<arr[i]){
@@ -30,6 +33,7 @@ int largestO(vector<int>& arr){
 // second largest
 // bruteforce approch O(nlogn)
 int secondLargest(vector<int>& arr) {
+    if (arr.empty()) return -1;
 
     sort(arr.begin(), arr.end());
 
@@ -47,6 +51,7 @@ int secondLargest(vector<int>& arr) {
 
 // optimal O(n)
 int secondLargestO(vector<int> & arr){
+    if (arr.empty()) return -1;
     int largest = arr[0];
     int secondlargestnum = -1;
     for(int i=1; i<arr.size(); i++){
@@ -76,6 +81,7 @@ void duplicate_r(vector<int>& arr){
 
 // Check if Array Is Sorted and Rotated
 bool check(vector<int>& nums){
+    if (nums.empty()) return false;
     int count=0;
     int n=nums.size();
     for(int i=1; i<n; i++){
